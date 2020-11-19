@@ -59,12 +59,61 @@ end
 
 class Towers_of_Hanoi
 
-  def move(disc, target)
+  attr_reader :tower1, :tower2, :tower3
 
+  def initialize()
+    @tower1, @tower2, @tower3 = [1, 2, 3, 4, 5, 6, 7], [], []
   end
 
-  def won?
+  def move(selected_tower, targeted_tower)
+    p "select a tower"
+    selected_tower = gets.chomp
+    p "pick a target tower"
+    targeted_tower = gets.chomp 
 
+    raise ArgumentError if selected_tower.length == 0  
+    raise ArgumentError if targeted_tower > selected_tower 
+    
+    move = ask_move()
+    raise ....
+    # disc will always be the top one 
+    # move disc to the next target
+    # remove disc to the og tower
+    # add disc to the target tower
+    
   end
+
+#   def won?
+
+#   end
 
 end
+
+
+
+# def [](pos)
+#   end
+
+#   def ask_tower
+#     p "pick a tower to be selected from"
+#     selected_tower = gets.chomp #arrival
+#     selected_tower
+#   end
+
+#   def ask_target_tower
+#     p "pick a target tower"
+#     targeted_tower = gets.chomp #destination
+#     targeted_tower
+#   end
+
+#   def ask_move
+#     selected_tower = ask_tower
+#     targeted_tower = ask_target_tower
+#     #arrived            #destination
+#     [selected_tower, targeted_tower]
+#   end
+
+#   # def fakemove()
+#   #   move = ask_move()
+#   #   raise ArgumentError if !
+#   # end

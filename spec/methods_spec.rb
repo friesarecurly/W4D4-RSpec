@@ -63,17 +63,64 @@ end
 
 
 describe Towers_of_Hanoi do
-  tower1 = [1, 2, 3, 4, 5, 6, 7]
-  tower2 = []
-  tower3 = []
+  # tower1 = [1, 2, 3, 4, 5, 6, 7]
+  # tower2 = []
+  # tower3 = []
 
-  describe "#move" do 
-    it "Only one disk can be moved at a time" do
-      expect(tower.move(disc,target)).to eq()
-    end
-    it "Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty tower"
-    it "No larger disk may be placed on top of a smaller disk."
+
+  subject(:tower) {Towers_of_Hanoi.new()}
+  
+  describe "#initialize" do 
+     it "make sure the setup is correct for towers" do 
+        expect(tower.tower1.length).to eq(7)
+        expect(tower.tower2).to be_empty
+        expect(tower.tower3).to be_empty
+     end
+
   end
+  
+  describe "#move" do
+  it "should move one disk to another tower" do 
+
+  end
+end
+describe "#ask_tower" do 
+  it "error if either tower is invalid" do 
+    allow(tower).to recieve(ask_move).and_return(....)
+    expect{tower.move}.to_not be_empty
+
+  end
+end
+describe "#move" do 
+
+end
+
+
+  describe "#fakemove" do 
+    it "should call ask_move"
+    it "should error if either tower is invalid" do 
+      allow(tower).to recieve(:ask_move).and_return([1,0])
+      expect{tower.fakemove()}.to raise_error(ArgumentError)
+    end
+
+    it "should error move to the targeted tower"
+end
+
+#   describe "#move" do
+
+#     it "raise en error if the picked tower is empty" do 
+#       expect{selected_tower.length == 0}.to raise_error(ArgumentError)
+#     end
+
+
+#     it "Only one disk can be moved at a time" do
+#       output = tower.move(disc, target)
+#       expect(output).to eq()
+#       expect(tower.move(disc,target)).to eq()
+#     end
+#     it "Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty tower"
+#     it "No larger disk may be placed on top of a smaller disk."
+#   end
 
 
 end
