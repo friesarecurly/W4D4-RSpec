@@ -35,3 +35,24 @@ subject(:arr) {arr=[-1, 0, 2, -2, 1]}
 
 
 end
+
+
+describe "#my_transpose" do
+  subject(:arr) { ([
+    [0, 1, 2], [3, 4, 5], [6, 7, 8]
+  ]) }
+
+  it "should transpose its array. ie: rows should become column and vice-versa" do
+    expect(my_transpose(arr)).to eq(arr.transpose)
+  end
+
+end
+
+
+describe "#stock_picker" do 
+  arr = [100, 2, 50, 10, 300, 90, 20]
+  it "should output the most profitable pair"  do
+    expect(stock_picker(arr)).to eq([1,4])
+  end
+
+end

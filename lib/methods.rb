@@ -24,3 +24,23 @@ class Array
   end
 
 end
+
+
+def my_transpose(arr)
+  output = [ ]
+  
+  arr.each_with_index do |col, idxc|
+    subrow = [ ]
+    col.each_with_index do |row, idxr|
+      subrow << arr[idxr][idxc]
+    end
+    output << subrow
+  end
+  
+  output
+end
+
+
+def stock_picker(arr)
+
+end
