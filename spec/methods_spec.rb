@@ -50,9 +50,15 @@ end
 
 
 describe "#stock_picker" do 
-  arr = [100, 2, 50, 10, 300, 90, 20]
-  it "should output the most profitable pair"  do
-    expect(stock_picker(arr)).to eq([1,4])
+  arr = [100, 20, 50, 100, 300, 90, 2]
+  best_days = stock_picker(arr)
+  it "should output the most profitable pair of days"  do
+    expect(best_days).to eq([1,4])
   end
+
+  it "you can not sell stock before you buy it" do 
+    expect(best_days[0]).to be < best_days[1]
+  end
+
 
 end

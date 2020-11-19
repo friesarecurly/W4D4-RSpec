@@ -42,5 +42,13 @@ end
 
 
 def stock_picker(arr)
+  pairs = Hash.new(0)
+
+  (0...arr.length-1).each do |day1|
+    (day1+1...arr.length).each do |day2|
+      pair = [day1, day2]
+      pairs[pair] = arr[day2] - arr[day1]
+    end
+  end
 
 end
