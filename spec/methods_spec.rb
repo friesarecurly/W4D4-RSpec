@@ -59,6 +59,21 @@ describe "#stock_picker" do
   it "you can not sell stock before you buy it" do 
     expect(best_days[0]).to be < best_days[1]
   end
+end
+
+
+describe Towers_of_Hanoi do
+  tower1 = [1, 2, 3, 4, 5, 6, 7]
+  tower2 = []
+  tower3 = []
+
+  describe "#move" do 
+    it "Only one disk can be moved at a time" do
+      expect(tower.move(disc,target)).to eq()
+    end
+    it "Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty tower"
+    it "No larger disk may be placed on top of a smaller disk."
+  end
 
 
 end

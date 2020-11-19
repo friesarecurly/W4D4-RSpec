@@ -47,8 +47,24 @@ def stock_picker(arr)
   (0...arr.length-1).each do |day1|
     (day1+1...arr.length).each do |day2|
       pair = [day1, day2]
-      pairs[pair] = arr[day2] - arr[day1]
+      pairs[pair] = (arr[day2] - arr[day1])
     end
+  end
+
+  biggest_diff = pairs.values.max
+
+  return pairs.key(biggest_diff)  
+end
+
+
+class Towers_of_Hanoi
+
+  def move(disc, target)
+
+  end
+
+  def won?
+
   end
 
 end
